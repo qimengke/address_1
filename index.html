@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="jquery-weui.min.css" />
+    <style>
+        #city-picker{
+              margin-left: 5%;
+    margin-right: 20%;
+    margin-top: 5%;
+    width: 200px;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<input type='text' id='city-picker' placeholder='请选择省市区县' />
+<script src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jquery-weui.min.js"></script>
+<script type="text/javascript" src="city-picker.min.js"></script>
+<script>
+    $("#city-picker").cityPicker({
+        title: "选择省市区/县",
+        onChange: function (picker, values, displayValues) {
+            console.log(values, displayValues);
+        }
+    });
+</script>
+</body>
+</html>
